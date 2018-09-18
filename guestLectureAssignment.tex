@@ -1,5 +1,7 @@
 \documentclass[]{article}
-
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 %opening
 \title{Report on Guest Lecture "Stochastic Geometry and Wireless Networks"}
 \author{Nima Seyedtalebi}
@@ -9,9 +11,12 @@
 \maketitle
 
 \begin{abstract}
-Random patterns in space are the subject of study in the branch of mathematics called "stochastic geometry." Using these tools, one can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title and begins by introducing spatial point processes, hereafter just "point processes."  A fundamental and important kind of point process called the stationary Poisson Point Process (PPP) has properties that make it useful for both building mathematical models and studying more complex processes. The points in a point process can be partitioned into two sets based on some given probability in a transformation called "thinning." The distribution of nearest neighbors to a hypothetical "typical" point provides a kind of spatial average. Point processes have applications in simulating and planning wireless networks.
+Random patterns in space are the subject of study in the branch of mathematics called "stochastic geometry." Using these tools, one can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title and begins by introducing spatial point processes. A fundamental and important kind of point process called the stationary Poisson Point Process (PPP) has properties that make it useful for both building mathematical models and studying more complex processes. Unless otherwise noted, we shall call them "point processes." The points in a point process can be partitioned into two sets based on some given probability in a transformation called "thinning." The distribution of nearest neighbors to a hypothetical "typical" point provides a kind of spatial average.
+Point processes have applications in simulating and planning wireless networks. Modern cellular networks are becoming more heterogeneous and unplanned, so point processes are useful to simulate such and study the effects of changes. Interference is one of the main problems facing cellular networks today, and by modeling such networks as point processes, one can find the probability distribution of the signal+interference to noise ratio or investigate the effect of adding a new cell tower. We can consider networks where all of the base stations are the same (homogeneous) or where they are different (heterogeneous).
 \end{abstract}
 
-\section{}
+\section{Description}
+Stochastic geometry extends the study of randomness to patterns in space. For this report, we will consider a specific class of mathematical objects defined on a subset of $\mathbb{R}^2$.  The presentation upon which this report is based defines a general \textit{point process} in $\mathbb{R}^2$ as "a random variable taking values in the space $\mathbb{N}$, where $\mathbb{N}$ is the set of all sequences $\phi \subset \mathbb{R}^2$ such that $\mathbb{N}$ is both finite and simple\footnote{A sequence is simple if $\forall x_i,_j: x_i \neq x_j$ if $i \neq j$}.
+\section{Discussion}
 
 \end{document}
