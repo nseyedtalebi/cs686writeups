@@ -16,7 +16,14 @@ Point processes have applications in simulating and planning wireless networks. 
 \end{abstract}
 
 \section{Description}
-Stochastic geometry extends the study of randomness to patterns in space. For this report, we will consider a specific class of mathematical objects defined on a subset of $\mathbb{R}^2$.  The presentation upon which this report is based defines a general \textit{point process} in $\mathbb{R}^2$ as "a random variable taking values in the space $\mathbb{N}$, where $\mathbb{N}$ is the set of all sequences $\phi \subset \mathbb{R}^2$ such that $\mathbb{N}$ is both finite and simple\footnote{A sequence is simple if $\forall x_i,_j: x_i \neq x_j$ if $i \neq j$}.
-\section{Discussion}
+Stochastic geometry extends the study of randomness to patterns in space. For this report, we will consider a specific class of mathematical objects defined on a subset of $\mathbb{R}^2$.  The presentation upon which this report is based defines a general \textit{point process} in $\mathbb{R}^2$ as a random variable taking values in the space $\mathbb{N}$, where $\mathbb{N}$ is the set of all sequences $\phi \subset \mathbb{R}^2$ such that $\mathbb{N}$ is both finite and simple\footnote{A sequence is simple if $\forall x_i,_j x_i \neq x_j$ if $i \neq j$}.
+Random variables are associated with probability distributions. Point process can be classified by the distribution of their random variables. For example, we have the simple example of a single uniformly-distributed point, the binomial point process, and the Poisson point process. These classifications We need a way to unambiguously describe a point process. A point process can be completely described by its void probability distribution. The void probability is the probability that no points from the process appear in some subset of the plane $K \subset \mathbb{R}^2$.
+Some point processes are \textit{stationary}, which means their distributions do not change under translation.
+Stationary point processes are desirable from an analytical perspective because they are the "same" everywhere. Of particular importance is the stationary Poisson point process (PPP).
+The PPP is important because it is both fundamental and useful by itself. Stationary Poisson point processes can be characterized by density, or the expected number of points in $B \subset \mathbb{R}^2$ divided by $|B|$. A Poisson point process has a density equal to $\lambda$, the mean of the associated Poisson distribution. Thus, we can completely describe a stationary PPP using only $\lambda$. Another important property is that for sets $A$ and $B$, if $A \cap B = \emptyset$ then the number of points in $A$ and $B$ are independent.
 
+ 
+
+\section{Discussion}
+ A stationary point process cannot be defined on a subset of $\mathbb{R}^2$. The real world has boundaries and is not like $\mathbb{R}^2$
 \end{document}
