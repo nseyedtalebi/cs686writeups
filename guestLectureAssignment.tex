@@ -29,10 +29,19 @@ If $0 < p < 1$, then $\phi_r$ and $\phi_b$ must have a density smaller than $\la
 
 Applications of stochastic geometry abound. Its tools can be applied to problems in diverse areas such as forestry, astronomy, and engineering. Stationary Poisson point processes are widely used to model systems where the points are randomly located. For example, we can model a modern cellular network using a PPP. The points in the process represent base stations to which mobile devices connect.  It may seem strange at first that we do not specify the exact location of each base station, but this reflects the reality of modern cellular networks: they are often unplanned and include different kinds of base stations with varying capabilities.
 
-One of the main challenges facing cellular network operators is interference. We can characterize the amount of interference a given user experiences using a dimensionless quantity called the signal to interference-and-noise ratio, or SINR. If we add a few further assumptions (e.g. "mobile users always connect to the nearest base station"), we can answer questions that would otherwise be difficult or impossible like, "What is the distribution of the SINR for a typical network user?" 
-
- 
+One of the main challenges facing cellular network designers and operators is interference. We can characterize the amount of interference a given user experiences using a dimensionless quantity called the signal to interference-and-noise ratio, or SINR. If we add a few further assumptions (e.g. "mobile users always connect to the nearest base station"), we can answer questions that would otherwise be difficult or impossible like, "What is the distribution of the SINR for a typical network user?" We can extend this model to networks that operate at multiple frequencies or to networks with different types of base station as well.
 
 \section{Discussion}
- A stationary point process cannot be defined on a subset of $\mathbb{R}^2$. The real world has boundaries and is not like $\mathbb{R}^2$
+Stationary point processes are useful because they are relatively simple to work with and can be used to describe more complex statistical models. Their simplicity comes at the cost of requiring several simplifying assumptions as part of the problem statement. We describe several possible problems and solutions for when these assumptions break down.
+
+The first problem is that stationary point processes (Poisson or otherwise) cannot be defined on just a subset of $\mathbb{R}^2$. They must be defined over the whole set. This is problematic because the universe is not homogeneous or isotropic at "human" scale, so no real point process\footnote{By "human" scale, we mean anything that we can model using classical mechanics without considering quantum mechanics or general relativity. It is well known that the classical models break down in those regimes.} can be truly stationary. The variations in distribution with respect to position could cause a real process to deviate from the model. Another problem arises when the points are not actually independent of each other. For example, consider the first cellular network example where the points are base stations. If the base stations can interact, they are no longer independent and thus our model deviates from the real world. Other parts of the model can cause deviations from ideal as well. For example, most differential equations cannot be solved without recourse to approximations.
+
+These problems do not mean that the PPP is useless in practice, but care must be taken when interpreting results. Whenever possible, the simulated results should be compared with data gathered from a real system. We saw this several times in the presentation. We can use this to improve the model incrementally. It may not be possible to make the deviation arbitrarily small but it might help us make it small enough for a particular application. For example, say we run some experiments with a basic PPP model and compare the results to some real data and find significant differences. If our analysis leads us to believe that some effect was not properly accounted for, this could be added and the simulations rerun. Other cases might require us to choose more accurate (and often more expensive) approximation methods if they exist.
+
+At bottom, all of the solutions offered are similar: reduce the differences between the model and the problem domain. 
+
+
+
+
+ 
 \end{document}
