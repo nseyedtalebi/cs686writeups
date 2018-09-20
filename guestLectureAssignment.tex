@@ -11,7 +11,7 @@
 \maketitle
 
 \begin{abstract}
-Random patterns in space are the subject of study in the branch of mathematics called "stochastic geometry." Using these tools, one can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title and begins by introducing spatial point processes. A fundamental and important kind of point process called the stationary Poisson Point Process (PPP) has properties that make it useful for both building mathematical models and studying more complex processes. The points in a point process can be partitioned into two sets based on some given probability and possibly other conditions in a transformation called \textit{thinning}\footnote{The name makes much more sense if "thinning" is understood as a reduction of density.}
+Random patterns in space are the subject of study in the branch of mathematics called "stochastic geometry." Using these tools, one can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title. We begin with a fundamental and important kind of point process called the stationary Poisson Point Process (PPP) which has properties that make it useful for building mathematical models and studying more complex processes. The points in a point process can be partitioned into two sets based on some given probability and possibly other conditions in a transformation called \textit{thinning}\footnote{The name makes much more sense if "thinning" is understood as a reduction of density.}
 Point processes have applications in simulating and planning wireless networks. Modern cellular networks are becoming more heterogeneous and unplanned, so point processes are useful to simulate such and study the effects of changes. Interference is one of the main problems facing cellular networks today, and by modeling such networks as point processes, one can find the probability distribution of the signal+interference to noise ratio or investigate the effect of adding a new cell tower. We can consider networks where all of the base stations are the same (homogeneous) or where they are different (heterogeneous).
 \end{abstract}
 
@@ -20,7 +20,7 @@ Stochastic geometry extends the study of randomness to patterns in space. For th
 
 Random variables are associated with probability distributions. Point process can be classified by the distribution of their random variables. For example, we have the simple example of a single uniformly-distributed point, the binomial point process, and the Poisson point process. These classifications We need a way to unambiguously describe a point process. A point process can be completely described by its void probability distribution. The void probability is the probability that no points from the process appear in some subset of the plane $K \subset \mathbb{R}^2$.
 Some point processes are \textit{stationary}, which means their distributions do not change under translation.
-Stationary point processes are desirable from an analytical perspective because they are the "same" everywhere. Of particular importance is the stationary Poisson point process (sPPP).
+Stationary point processes are desirable from an analytical perspective because they are the "same" everywhere. One important kind is the stationary Poisson point process (sPPP).
 
 The sPPP is important bIf we think of coloring the points one by one, the probability that the next point is red is always the same.ecause it is both fundamental and useful by itself. Stationary Poisson point processes can be characterized by density, or the expected number of points in $B \subset \mathbb{R}^2$ divided by $|B|$. A stationary Poisson point process has a density equal to $\lambda$, the mean of the associated Poisson distribution. Since the distribution of a stationary process does not change with respect to position in space, we can completely describe a PPP using only $\lambda$. Another important property of the PPP is that the points are all independent of each other\footnote{More formally, given sets $A$ and $B$, if $A \cap B = \emptyset$ then the number of points in $A$ and $B$ is independent.}. The points in any such subset are independent and uniformly distributed over that set when we condition on the number of points in the subset. This means that any such subset is a binomial point process (BPP) and that the Poisson point process is a generalization of the BPP. Recall too that a BPP is a collection of $n$ independent uniformly-distributed point processes with a single point each. We can construct more complex point processes by combining and generalizing the fundamental ones.
 
@@ -32,16 +32,22 @@ Applications of stochastic geometry abound. Its tools can be applied to problems
 One of the main challenges facing cellular network designers and operators is interference. We can characterize the amount of interference a given user experiences using a dimensionless quantity called the signal to interference-and-noise ratio, or SINR. If we add a few further assumptions (e.g. "mobile users always connect to the nearest base station"), we can answer questions that would otherwise be difficult or impossible like, "What is the distribution of the SINR for a typical network user?" We can extend this model to networks that operate at multiple frequencies or to networks with different types of base station as well.
 
 \section{Discussion}
-Stationary point processes are useful because they are relatively simple to work with and can be used to describe more complex statistical models. Their simplicity comes at the cost of requiring several simplifying assumptions as part of the problem statement. We describe several possible problems and solutions for when these assumptions break down.
+Stationary point processes are useful because they are relatively simple to work with and can be used to describe more complex statistical models. Those favorable properties come at the cost of making several simplifying assumptions.
 
-The first problem is that stationary point processes (Poisson or otherwise) cannot be defined on just a subset of $\mathbb{R}^2$. They must be defined over the whole set. This is problematic because the universe is not homogeneous or isotropic at "human" scale, so no real point process\footnote{By "human" scale, we mean anything that we can model using classical mechanics without considering quantum mechanics or general relativity. It is well known that the classical models break down in those regimes.} can be truly stationary. The variations in distribution with respect to position could cause a real process to deviate from the model. Another problem arises when the points are not actually independent of each other. For example, consider the first cellular network example where the points are base stations. If the base stations can interact, they are no longer independent and thus our model deviates from the real world. Other parts of the model can cause deviations from ideal as well. For example, most differential equations cannot be solved without recourse to approximations.
+Stationary point processes cannot be defined on just a subset of $\mathbb{R}^2$. They must be defined over the whole set, so no real point process is truly stationary \footnote{That does not preclude being so close to stationary that the difference does not matter in practice.}. The variations in distribution with respect to position could cause a real process to deviate from the model. Another problem arises when the points are not actually independent of each other. For example, consider the first cellular network example where the points are base stations. If the base stations can interact, they are no longer independent and thus our model deviates from the real world. Other parts of the model can cause deviations from ideal as well. For example, most differential equations cannot be solved without recourse to approximations.
 
 These problems do not mean that the PPP is useless in practice, but care must be taken when interpreting results. Whenever possible, the simulated results should be compared with data gathered from a real system. We saw this several times in the presentation. We can use this to improve the model incrementally. It may not be possible to make the deviation arbitrarily small but it might help us make it small enough for a particular application. For example, say we run some experiments with a basic PPP model and compare the results to some real data and find significant differences. If our analysis leads us to believe that some effect was not properly accounted for, this could be added and the simulations rerun. Other cases might require us to choose more accurate (and often more expensive) approximation methods if they exist.
 
-At bottom, all of the solutions offered are similar: reduce the differences between the model and the problem domain. 
-
-
-
-
- 
+All of the solutions offered are similar in that they seek to reduce the differences between the model and the problem domain. Sometimes changing the problem domain is useful. In the first example from the presentation, the model does not account for the use of frequency bands. 
+\nocite{kham}
+\nocite{randv}
+\nocite{ppp}
+\nocite{poissond}
+\bibliography{guestLectureAssignment}
+\bibliographystyle{plain}
 \end{document}
+
+
+
+
+
