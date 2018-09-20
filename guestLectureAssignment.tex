@@ -2,6 +2,9 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[margin=0.75in]{geometry}
+
 %opening
 \title{Report on Guest Lecture "Stochastic Geometry and Wireless Networks"}
 \author{Nima Seyedtalebi}
@@ -11,14 +14,15 @@
 \maketitle
 
 \begin{abstract}
-Random patterns in space are the subject of study in the branch of mathematics called "stochastic geometry." Using these tools, one can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title. We begin with a fundamental and important kind of point process called the stationary Poisson Point Process (PPP) which has properties that make it useful for building mathematical models and studying more complex processes. The points in a point process can be partitioned into two sets based on some given probability and possibly other conditions in a transformation called \textit{thinning}\footnote{The name makes much more sense if "thinning" is understood as a reduction of density.}
-Point processes have applications in simulating and planning wireless networks. Modern cellular networks are becoming more heterogeneous and unplanned, so point processes are useful to simulate such and study the effects of changes. Interference is one of the main problems facing cellular networks today, and by modeling such networks as point processes, one can find the probability distribution of the signal+interference to noise ratio or investigate the effect of adding a new cell tower. We can consider networks where all of the base stations are the same (homogeneous) or where they are different (heterogeneous).
+Stochastic geometry is the study of random patterns in space. Using these tools, we can answer questions in a diverse array of fields ranging from astronomy to forestry. This report is structured like the presentation mentioned in the title. We begin with a fundamental and important kind of point process called the stationary Poisson Point Process (PPP). This fundamental kind of point process has properties that make it useful for building mathematical models. 
+
+The points in a point process can be partitioned into two sets based on some given probability and possibly other conditions in a transformation called \textit{thinning}\footnote{The name makes much more sense if "thinning" is understood as a reduction of density.} Point processes have applications in simulating and planning wireless networks. Modern cellular networks are becoming more heterogeneous and unplanned, so point processes are useful to simulate such and study the effects of changes. Interference is one of the main problems facing cellular networks today, and by modeling such networks as point processes, one can find the probability distribution of the signal+interference to noise ratio or investigate the effect of adding a new cell tower. We can consider networks where all of the base stations are the same (homogeneous) or where they are different (heterogeneous).
 \end{abstract}
 
 \section{Description}
-Stochastic geometry extends the study of randomness to patterns in space. For this report, we will consider a specific class of mathematical objects defined on a subset of $\mathbb{R}^2$.  The presentation upon which this report is based defines a general \textit{point process} in $\mathbb{R}^2$ as a random variable taking values in the space $\mathbb{N}$, where $\mathbb{N}$ is the set of all sequences $\phi \subset \mathbb{R}^2$ such that $\mathbb{N}$ is both finite and simple\footnote{A sequence is simple if $\forall x_i,_j x_i \neq x_j$ if $i \neq j$}.
+Stochastic geometry extends the study of randomness to patterns in space. For this report, we will consider a specific class of mathematical objects defined on a subset of $\mathbb{R}^2$. A \textit{point process} in $\mathbb{R}^2$ as a random variable taking values in the space $\mathbb{N}$, where $\mathbb{N}$ is the set of all sequences $\phi \subset \mathbb{R}^2$ such that $\mathbb{N}$ is both finite and simple\cite{kham}\footnote{A sequence is simple if $\forall x_i,_j x_i \neq x_j$ if $i \neq j$}.
 
-Random variables are associated with probability distributions. Point process can be classified by the distribution of their random variables. For example, we have the simple example of a single uniformly-distributed point, the binomial point process, and the Poisson point process. These classifications We need a way to unambiguously describe a point process. A point process can be completely described by its void probability distribution. The void probability is the probability that no points from the process appear in some subset of the plane $K \subset \mathbb{R}^2$.
+Random variables are associated with probability distributions. Point process can be classified by the distribution of their random variables. For example, we have the simple example of a single uniformly-distributed point, the binomial point process, and the Poisson point process. A point process can be completely described by its void probability distribution. The void probability is the probability that no points from the process appear in some subset of the plane $K \subset \mathbb{R}^2$\cite{ppp}.
 Some point processes are \textit{stationary}, which means their distributions do not change under translation.
 Stationary point processes are desirable from an analytical perspective because they are the "same" everywhere. One important kind is the stationary Poisson point process (sPPP).
 
@@ -43,8 +47,9 @@ All of the solutions offered are similar in that they seek to reduce the differe
 \nocite{randv}
 \nocite{ppp}
 \nocite{poissond}
-\bibliography{guestLectureAssignment}
 \bibliographystyle{plain}
+\bibliography{guestLectureAssignment}
+
 \end{document}
 
 
