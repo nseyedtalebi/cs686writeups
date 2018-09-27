@@ -1,0 +1,38 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{savetrees}
+
+%opening
+\title{Report on Guest Lecture "Designing Green Communication Systems for Smart and Connected Communities via Dynamic Spectrum Access"}
+\author{Nima Seyedtalebi}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Smart and connected communities (SCC) promise to improve the quality of life for residents while decreasing their environmental burden. Smart devices are abundant  but connectivity has not grown as quickly because of the infrastructure costs involved. Network service providers are unlikely to build the necessary infrastructure for SCC because doing so is not profitable. Moreover, operational costs increase as the network grows so even if the infrastructure were in place, the costs of operating and maintaining such a network must be considered. To actualize the potential in SCCs, we must develop networks that are more energy-efficient, cheaper, and easier to administer. The solution presented in "Designing Green Communication Systems..." is to match application requirements with physical network characteristics to increase energy and spectral efficiency. This is achieved by using dynamic spectrum access (DSA) and a weighted, undirected graph that encodes both the underlying physical network structure and characteristics of interest like energy cost or latency. The graph is constructed so that finding the shortest path through it given some constraints corresponds to finding the most efficient way to send a message through the physical network. A new algorithm is proposed to find such a path.
+\end{abstract}
+
+\section{Description}
+Real examples of smart and connected communities are uncommon, yet mobile and wireless IP-enabled devices are widespread. According to the Cisco Visual Networking Index, global Internet Protocol (IP) traffic will increase 127-fold\footnote{compared to 2005} and traffic from wireless and mobile devices will comprise over 63 percent of global IP traffic by 2021. In 2016, wireless and mobile devices accounted for 49\% of global IP traffic.\cite{cisco} If wireless and mobile devices are so dominant, why not simply use the existing infrastructure to realize the SCC vision? Building new infrastructure is prohibitively expensive, and the existing infrastructure and protocols are too inefficient to support sustainable SCCs. Networks for sustainable SCCs must be cost-effective, energy-efficient, and provide Quality of Service (QoS) guarantees.\cite{shah}
+Current wireless network offerings can be grouped into short-range and long-range. Short-range options like WiFi and Bluetooth use an unlicensed frequency band of the electromagnetic spectrum. They do not work well for longer distances because many devices are required. Long-range options like 3/4G, GSM, and LTE are inefficient and use a part of the spectrum that require a license. The license holder may only use the parts of the spectrum that it is licensed for. The number of usable bands is limited and demand for wireless and mobile networks is increasing steadily, so there is an incentive to overprovision to allow for growth since licenses may not be available in the future. Underprovisioning is also possible e.g. when a provider's subscriber base grows too quickly to obtain additional frequency bands. Both are bad, and there are further problems beyond those such as interference. Neither the existing short nor long-range technologies are sufficient alone, but perhaps they can be combined to overcome the limitations?
+A technique called dynamic spectrum access makes it possible to bridge the gap between short and long-range systems by allowing devices to use different parts of the spectrum.
+
+\section{Discussion}
+The energy cost and latency must be known to run the algorithm. How will we know these things? Figuring them out won't be free.
+What does the device support look like? What things can actually do DSA?
+
+\bibliographystyle{plain}
+\bibliography{guestLectureAssignment2}
+
+\end{document}
+
+
+
+
+
